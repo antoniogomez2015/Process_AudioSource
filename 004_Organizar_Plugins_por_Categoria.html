@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!--
+
+Configurar Paths de Plugins para 32 y 64 bits:
+______________________________________________
+
+    Como Ordenar Plugins VST
+        https://www.youtube.com/watch?v=oD1UgL-v0Wc
+
+
+    _para que cuando instalemos nuevos plugins, el gestor de instalación apunte hacia las carpetas que hemos configurado tanto para  32, como para 64, bits, de forma por defecto
+
+
+
+    Para 64 bits:
+    _____________
+
+    _para configurar una carpeta para 64 bits, debemos de ir ha "C:\Program Files", y en la cuál, debemos de verificar si existe una carpeta llamada "VASTPlugins", más si no existe debemos de crearla
+
+    _una vez hemos creado la carpeta "VSTPlugins", debemos de abrir el editor de registro para lo cuál, debemos de ir ha "inicio", ó a través, del shortcut, "Shift + R", y una vez allí en el buscador debemos tipear "regedit"
+
+        _para que así, nos aparezca la opción de "regedit.exe", la cúal, debemos de ejecutar
+
+
+    _de ésta manera, una vez estando en editor de "regedit", debemos de ir ha la carpeta: 
+    
+        _"HKEY_LOCAL_MACHINE"
+            _SOFTWARE
+                _VST
+
+
+    _si la carpeta "VST", no existe en el registro podremos crearla haciendo "mouse right click", sobre la carpeta anterior en éste caso "SOFTWARE", y seleccionando las opción de "Nuevo/Clave", y la renombramos como "VST", la nueva carpeta creada
+
+    _para a continuación seleccionar la carpeta "VST", y entrar en el panel derecho de "regedit", para que así, podamos crear un nuevo valor de cadena
+
+    _para lo cuál, debemos de hacer "mouse right click", sobre un área vacía del panel de la derecha de regedit
+
+    _para que así, en un menú contextual seleccionar "Nuevo/Valor de cadena", lo cuál, creará un nuevo archivo el cuál, debemos de renombrar exactamente como "VSTPluginsPath"
+
+    _para a continuación ejecutar el nuevo archivo que hemos creado para lo cuál, debemos de hacer doble click, sobre éste archio
+
+    _para que así, se abra una nueva ventana de configuración en la cuál, debemos de indicar en el parámetro de "Información del valor", la ruta de la carpeta donde tenemos los plugins, en éste caso "C:\Program Files\VSTPlugins"
+
+    _y una vez indicada la ruta donde se encuantran los plugins, debemos darle en aceptar para que así, quede el registro creado correctamente 
+    
+    _de ésta manera, cuando instalemos nuevos plugins, de 64 bits, el wizard, de instalación del plugins, apuntará automáticamente hacia ésta dirección ó carpeta qe hemos configurado en éste proceso
+
+
+
+
+    Para 32 bits:
+    _____________
+
+    _para configurar una carpeta para 64 bits, debemos de ir ha "C:\Program Files (x86)", y en la cuál, debemos de verificar si existe una carpeta llamada "VASTPlugins", más si no existe debemos de crearla
+
+    _una vez hemos creado la carpeta "VSTPlugins", debemos de abrir el editor de registro para lo cuál, debemos de ir ha "inicio", ó a través, del shortcut, "Shift + R", y una vez allí en el buscador debemos tipear "regedit"
+
+        _para que así, nos aparezca la opción de "regedit.exe", la cúal, debemos de ejecutar
+
+
+    _de ésta manera, una vez estando en editor de "regedit", debemos de ir ha la carpeta: 
+    
+        _"HKEY_LOCAL_MACHINE"
+            _SOFTWARE
+                _Won6432Node
+                    _VST
+
+
+    _si la carpeta "VST", no existe en el registro podremos crearla haciendo "mouse right click", sobre la carpeta anterior en éste caso "Won6432Node", y seleccionando las opción de "Nuevo/Clave", y la renombramos como "VST", la nueva carpeta creada
+
+    _para a continuación seleccionar la carpeta "VST", y entrar en el panel derecho de "regedit", para que así, podamos crear un nuevo valor de cadena
+
+    _para lo cuál, debemos de hacer "mouse right click", sobre un área vacía del panel de la derecha de regedit
+
+    _para que así, en un menú contextual seleccionar "Nuevo/Valor de cadena", lo cuál, creará un nuevo archivo el cuál, debemos de renombrar exactamente como "VSTPluginsPath"
+
+    _para a continuación ejecutar el nuevo archivo que hemos creado para lo cuál, debemos de hacer doble click, sobre éste archio
+
+    _para que así, se abra una nueva ventana de configuración en la cuál, debemos de indicar en el parámetro de "Información del valor", la ruta de la carpeta donde tenemos los plugins, en éste caso "CC:\Program Files (x86)\VSTPlugins"
+
+    _y una vez indicada la ruta donde se encuantran los plugins, debemos darle en aceptar para que así, quede el registro creado correctamente 
+    
+    _de ésta manera, cuando instalemos nuevos plugins, de 32 bits, el wizard, de instalación del plugins, apuntará automáticamente hacia ésta dirección ó carpeta qe hemos configurado en éste proceso
+    
+
+
+-->
+    
+</body>
+</html>
