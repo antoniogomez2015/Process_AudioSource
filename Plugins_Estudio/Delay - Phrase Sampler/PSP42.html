@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!--
+
+
+PSPaudioware - PSP42:
+_____________________
+
+    http://www.pspaudioware.com/plugins/delays/lexicon_psp_42/
+
+
+
+Tutorial:
+_________
+
+    _
+
+
+IMPRESIONES DE USO:
+___________________ 
+
+    _éste es un saturador con matices de distorción el cuál, nos permitirá agregar caracter a una frecuencia con una distorción opcional y totalmente configurable
+
+    _el altamente recomendable para uso general en los que desiemos acentuar parte concretar de las ondas con graves, medio ó agudos, excelente para producción
+
+
+
+Características:
+________________
+
+_Lexicon PSP42 es un muestreador de frases y retardo estéreo digital de alta calidad basado en el legendario procesador Lexicon PCM42 
+
+_famoso por su sonido distintivo y su concepto único, Lexicon PSP42 ha sido cuidadosamente diseñado para reproducir con precisión la flexibilidad y la calidez de este renombrado clásico. 
+
+_esto se ha logrado mediante la incorporación de un algoritmo de saturación de cinta preciso y una línea de retardo que funciona con una frecuencia de muestreo variable que simula las propiedades físicas de los retrasos de las máquinas de cintas antiguas
+
+
+
+
+
+Consideraciones:
+________________
+
+_ninguna
+
+
+
+
+Controles:
+__________
+
+
+HEADROOM:
+________
+
+    _el medidor indica el nivel de entrada + señal de realimentación 
+    
+    _se enchufa justo después del bloque de saturación 
+    
+    _el nivel indicado por el medidor controla el circuito seguidor de envolvente que está generando la señal de modulación 
+    
+    _para monitorear y ajustar el nivel de la señal de entrada, solo gire la perilla FEEDBACK a 0 
+    
+    _(tenga en cuenta que el nivel mostrado siempre es más bajo o igual que la entrada real de la señal, debido a la aplicación de la saturación)
+
+
+DLYx2:
+______
+
+    _éste parámetro nos permitirá duplica el tiempo de demora real y máximo al cambiar la frecuencia de muestreo de la línea de retardo a la mitad de su valor. 
+    
+    _la reducción de la frecuencia de muestreo también afecta a la banda de frecuencia, creando un efecto de baja fidelidad que es interesante por sí solo. 
+    
+    _cuando se presiona DLYx2, el tono de la señal húmeda variará porque el búfer de retardo se ha capturado mientras se opera con una frecuencia de muestreo diferente 
+    
+    _después de que se haya reproducido todo el búfer, siempre que la frecuencia de muestreo permanezca constante, el búfer se llena y se reproduce con la misma frecuencia y se conserva el tono real de la señal de entrada, a menos que el modo RPT esté activado
+
+
+INPUT:
+______
+
+    _éste parámetro nos permitirá controlar la ganancia de la señal de entrada dentro del rango de –oo a +12 dB con 0dB, en la posición central 
+    
+    _a medida que la señal de entrada atraviesa el bloque de saturación en la ruta de procesamiento, el ajuste de la ganancia de entrada también afecta el contenido de los armónicos de la señal 
+
+
+OUTPUT:
+_______
+
+    _éste parámetro nos permitirá atenúa o amplifica el nivel de la señal de salida de Lexicon PSP42 (húmedo + seco) 
+    
+    _en la posición central, la señal de salida no se ve afectada 
+    
+    _al girar la perilla en sentido contrario a las agujas del reloj se atenúa la señal hasta que la unidad no emite ningún sonido 
+    
+    _mientras lo gira en el sentido de las agujas del reloj amplifica la señal hasta + 12dB.
+
+
+FEEDBACK:
+______________
+
+    _éste parámetro nos permitirá controlar la atenuación que se aplica a la señal que se está transmitiendo desde la salida de la línea de retardo a su entrada 
+    
+    _lo que afecta el número de repeticiones de señales audibles, el rango de operación del mando es de –oo dB a 0 dB.
+
+
+HI CUT:
+_______
+
+    _éste parámetro nos permnitirá activar el filtro de paso bajo de retroalimentación 
+    
+    _La frecuencia de la esquina se fija en 4kHz y la reducción del filtro es de 6db / octava 
+    
+    _cuando se enciende, las altas frecuencias de la señal se atenúan más que las bajas frecuencias 
+    
+    _esto es análogo a la absorción de alta frecuencia causada por la reflexión de la pared
+
+
+FB INV:
+_______
+
+    _éste parámetro nos permitirá invierte la fase de la señal de retroalimentación 
+    
+    _si bien esto no es audible con un largo tiempo de retardo, puede alterar dramáticamente el sonido si el tiempo de retardo es corto 
+    
+    _para evitar clics que habrían ocurrido inevitablemente si la fase se hubiera cambiado inmediatamente después de la activación del botón, la fase se invierte en la siguiente
+
+
+DLY INV:
+________
+
+    _éste parámetro nos permitirá inviertir la fase de la señal húmeda (procesada) 
+    
+    _al igual que FB INV, se vuelve audible cuando el tiempo de retardo es corto
+    
+    _la fase se invierte realmente en el siguiente cruce por cero para evitar clics.
+
+
+BYPASS led:
+___________
+
+    _éste parámetro de tipo led está encendido cuando el módulo está en modo bypass, que puede activarse apagando el botón POWER 
+    
+    _mientras se encuentra en modo de omisión, el procesamiento no se detiene y aún continúa en segundo plano 
+    
+    _la única diferencia es que la señal húmeda ó procesada ya no se envía a la salida de Lexicon PSP42 
+    
+    _Esto asegura que el complemento vuelva inmediatamente al estado en el que se habría encontrado, si no se hubiera realizado la omisión de activado en absoluto
+
+
+OUTPUT MIX:
+___________
+
+    _éste parámetro controla la proporción en la cual las señales secas y húmedas están presentes en la salida del Lexicon PSP42 
+    
+    _en la posición media, ambas señales se atenúan en -6dB.
+
+
+RPT oo:
+_______
+
+    _éste parámetro convierte el Lexicon PSP42, en modo sampler de frases 
+    
+    _el tiempo del bucle de audio capturado es igual al tiempo de retardo actual Si 
+    
+    _el Lexicon PSP42, está en modo DLY (controlado por el botón DLY <> CLK, que se describe a continuación), el modo de muestreador de frases se activa inmediatamente después de presionar el botón 
+    
+    _alternativamente, cuando está en modo CLK, este modo se activará tan pronto como el LED CLK, parpadee 
+    
+    _esto permite capturar el bucle perfecto si el tiempo de retardo está bloqueado por tempo 
+    
+    _cuando se activa, el audio que ya está capturado en el búfer interno de retardo se reproduce una y otra vez hasta que se desactiva RPT 
+    
+    _la frecuencia de muestreo interna aún se puede cambiar en modo RPT, con el botón DLYx2, o la sección de modulación, lo que resulta en alteraciones de la velocidad de reproducción y el tono 
+    
+    _cuando se captura el bucle, el fundido cruzado de 10 ms, se aplica a sus extremos para evitar clics 
+    
+    _como el contenido del búfer capturado se pierde cuando se cambia el valor predeterminado, la posición del botón RPT, tampoco se almacena en un valor predeterminado
+
+
+DLY<>CLK switch:
+________________
+
+    _éste parámetro nos permitirá actuar entre los dos modos de funcionamiento principales de Lexicon PSP42 
+    
+    _en el modo DLY, el tiempo de retardo se establece en ms, usando los botones DN / ARRIBA o cualquiera de los dos controles deslizantes invisibles disponibles
+    
+    _en el modo CLK, el tiempo está relacionado con el tempo, si su host es capaz de proporcionar el complemento con información de tempo, Lexicon PSP42, se bloqueará automáticamente 
+    
+    _de lo contrario, aún es posible configurar el tempo manualmente arrastrando los controles deslizantes invisibles mientras se encuentra en el modo CLK 
+    
+    _Los botones DN y ARRIBA navegan a través de los valores permitidos del numerador y del denominador, respectivamente. Cuando se presiona shift o ctrl, el valor del numerador / denominador disminuye 
+    
+    _la fracción resultante es el tiempo de retardo como parte de una barra (por ejemplo, ¼ significa el tiempo de retardo de un tiempo o un cuarto de nota) 
+    
+    _si el tiempo de retardo real resultante excede el valor máximo permitido (debido al tamaño del búfer de retardo limitado), los valores del numerador y del denominador comienzan a parpadear 
+    
+    _Si el complemento está bloqueado al valor de tempo recibido de la aplicación host, los cambios de tempo afectan el tiempo de retardo real en tiempo real
+
+    _cuando se cambia del modo CLK al modo DLY, el tiempo de retardo en ms, siempre se establece para que sea igual al tiempo resultante de los ajustes del numerador / denominador y del tempo 
+    
+    _Permite que el tiempo de retardo se establezca en unidades rítmicas en el modo CLK, y luego se haga independiente para albergar los cambios de tempo, al cambiar al modo DLY 
+    
+    _los ajustes finos pueden aplicarse también si no se pretende el tiempo exacto.
+
+    _cuando se cambia de DLY a CLK, hay tres formas posibles en que el Lexicon PSP42, puede actuar, dependiendo de la tecla presionada mientras se cambia:
+
+    - sin clave - se restauran los valores recientes del numerador y del denominador
+
+    - alt - se restaura el último valor del denominador y se recalcula el numerador para que coincida con el tempo, establecido en ms lo más cerca posible
+
+    - shift - tanto el numerador como el denominador se recalculan para coincidir con el tempo establecido en ms, lo más cerca posible.
+
+
+DN/UP:
+______
+
+    _éste parámetro nos permitirá cambiar el tiempo de retardo hacia arriba y hacia abajo cuando está en modo DLY 
+    
+    _las teclas Mayús y Ctrl modifican el tamaño del paso a 10 y 100, respectivamente 
+    
+    _cuando el modo CLK está activado, los botones navegan a través de los valores permitidos del numerador y del denominador 
+    
+    _tenga en cuenta que cambiar el valor del denominador también puede implicar el cambio automático del valor del numerador, si el tiempo de retardo resultante supera el tamaño del búfer interno 
+    
+    _tenga en cuenta que el tiempo de retardo real es el resultado del tamaño del búfer de retardo, que se configura con los botones DN y ARRIBA y los controles deslizantes invisibles, y la tasa de muestreo del búfer de retardo que se ve afectada por la sección de modulación, el mando MANUAL y el botón DLYx2
+
+
+DELAY TIME invisible sliders:
+_____________________________
+
+    _éste parámetro nos permitirá a través, de controles deslizantes invisibles el tiempo de retardo y el tempo que se controlen con el mouse de manera conveniente 
+    
+    _al hacer clic en el botón izquierdo del mouse en cualquiera de los controles deslizantes y al arrastrar hacia la izquierda y hacia la derecha (o hacia arriba y hacia abajo para realizar cambios más rápidos) 
+    
+    _se controla el tiempo de retardo o el tempo, según el modo en que Lexicon PSP42, está operando (DLY o CLK) 
+    
+    _presionar Mayús mientras se arrastra, lo cuál, permite realizar ajustes precisos 
+    
+    _el ajuste de tempo manual no es posible si la aplicación host proporciona el complemento con información de tempo.
+
+
+MAIN DISPLAY area:
+__________________
+
+    _éste parámetro nos permitirá controlar el área que consta de dos partes: una pantalla de cuatro dígitos que muestra el tiempo de retardo actual en ms, o los valores del numerador y del denominador 
+    
+    _así como el tempo y los tres leds, uno de los cuales parpadea en sincronización con el tempo del host y los valores del numerador / denominador establecidos 
+    
+    _mientras que los otros dos indican el modo RPT y el filtro HI CUT, respectivamente 
+    
+    _el tiempo de retardo en ms, es siempre el tiempo de retardo real que depende no solo de la longitud del búfer de retardo como se establece con los botones DN / UP y los controles deslizantes invisibles 
+    
+    _sino también de la frecuencia de muestreo con la que está operando el búfer. Siempre que se cambie la frecuencia de muestreo al presionar el botón DLYx2, o por la actividad de la sección de modulación y el botón MANUAL, seguirá el tiempo de retardo mostrado 
+    
+    _El área completa de la pantalla ha sido organizada para actuar como un control deslizante invisible para un control de tiempo de retardo más intuitivo.
+
+
+MANUAL:
+_______
+
+    _éste parámetro nos permitirá controlar la velocidad de muestreo del búfer de retardo interno, en relación con la frecuencia de muestreo del host La frecuencia interna se puede establecer en cualquier valor entre 0,5x y 1,5x de la frecuencia de muestreo del host 
+    
+    _tenga en cuenta que la frecuencia de muestreo interna se ve afectada por el LFO y el detector de envolvente, así como en la medida en que está controlado por el mando DEPTH 
+    
+    _para mantener la frecuencia de muestreo interna resultante dentro de los límites permitidos de 0,5x… .1,5x, el rango de operación del mando MANUAL se reduce si el mando DEPTH se ajusta a un valor mayor que 0 
+    
+    _cuando DEPTH, está en su posición máxima, el MANUAL El mando no afecta en absoluto al procesamiento.
+
+
+DEPTH:
+______
+
+    _éste parámetro nos permitirá establecer hasta qué punto la frecuencia de muestreo interna, que determina el tiempo de retardo y el tono de reproducción, se ve afectada por la señal de modulación que consta de las señales del LFO y del detector de envolvente.
+
+
+WAVEFORM:
+_________
+
+    _éste parámetro nos permitirá cambiar entre las dos formas de onda LFO disponibles (sinusal y cuadrada) y controla la proporción en la que se mezclan las señales del LFO y del detector de envolvente para formar la señal de modulación final que controla la frecuencia de muestreo interna
+
+
+RATE:
+_____
+
+    _éste parámetro nos permitirá ajustar la frecuencia del LFO, que va desde 0.1Hz, hasta 1Hz, en la posición media, hasta el máximo de 10Hz. El LED RATE, parpadea a esta frecuencia y su brillo muestra la fase actual del LFO
+
+
+RATE led:
+_________
+
+    _éste parámetro nos permitirá ver a través, de un led y su parpadeo en relación a la frecuencia establecida por el mando RATE 
+    
+    _su brillo instantáneo depende de la fase en la que se encuentre el LFO en este momento
+
+
+POWER:
+______
+
+    _éste parámetro nos permitirá activar el modo de bypass 
+    
+    _el bypass está activo cuando el botón POWER está apagado 
+    
+
+
+Lexicon PSP42 logo:
+___________________
+
+    _éste parámetro nos permitirá abrir la pantalla del panel posterior de Lexicon PSP42, (que contiene información de desarrollador y autorización), cuando se hace clic en cualquier lugar del área del panel posterior para volver al panel principal del complemento
+
+    _todos los controles de Lexicon PSP42, tienen valores predeterminados que se pueden restaurar manteniendo presionada la tecla ctrl mientras hace clic en el área del control
+
+    _para eliminar los clics que habrían ocurrido inevitablemente si los valores de los parámetros hubieran cambiado bruscamente, cada parámetro continuo de Lexicon PSP42, está sujeto a un filtro que suaviza los cambios repentinos de su valor 
+    
+    _esta y otras técnicas, como las comprobaciones de cruce por cero y las atenuaciones cruzadas en tiempo real, minimizan con éxito los artefactos no deseados que podrían producirse durante la operación.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+
+</body>
+</html>
